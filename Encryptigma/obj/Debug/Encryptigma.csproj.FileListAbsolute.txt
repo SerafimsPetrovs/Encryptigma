@@ -1,0 +1,7 @@
+C:\Users\seraf\source\repos\Encryptigma\Encryptigma\bin\Debug\Encryptigma.exe.config
+C:\Users\seraf\source\repos\Encryptigma\Encryptigma\bin\Debug\Encryptigma.exe
+C:\Users\seraf\source\repos\Encryptigma\Encryptigma\bin\Debug\Encryptigma.pdb
+C:\Users\seraf\source\repos\Encryptigma\Encryptigma\obj\Debug\Encryptigma.csproj.AssemblyReference.cache
+C:\Users\seraf\source\repos\Encryptigma\Encryptigma\obj\Debug\Encryptigma.csproj.CoreCompileInputs.cache
+C:\Users\seraf\source\repos\Encryptigma\Encryptigma\obj\Debug\Encryptigma.exe
+C:\Users\seraf\source\repos\Encryptigma\Encryptigma\obj\Debug\Encryptigma.pdb
