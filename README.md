@@ -1,4 +1,5 @@
 # Encryptigma
+**The main goal of this project was not to use common encryption algorithms like AES and RSA. The primary aim was to create something unique and original, albeit simple. By the way, during the development process, a "destroy" function for encrypted files was accidentally implemented.**
 
 Encryptigma is a simple console application that provides basic encryption and decryption functionalities using a randomized key generator. The application encrypts text input by the user and saves the encrypted text to a file. It can also decrypt previously encrypted text from a file.
 
