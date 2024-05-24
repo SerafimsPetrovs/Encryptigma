@@ -12,7 +12,7 @@ namespace Encryptigma
     {
         public static void Main()
         {
-            //           C:\Users\seraf\OneDrive\Desktop\encrypted_text.txt
+            //test
             Console.WriteLine("Select 1: Encryption ||| 2: Decryption");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
