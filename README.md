@@ -73,6 +73,10 @@ Handles file operations, such as saving the encrypted text to a file and reading
 3. Provide the path to the encrypted file.
 4. The application will display the decrypted text.
 
+## Potential Issues
+
+When moving the encrypted file to a different folder or location, there might be issues with decryption due to the dependency on the file creation time for generating the decryption key. (bug has been found and is in the process of being fixed)
+
 ## Contributing
 
 Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
@@ -83,6 +87,6 @@ This project is licensed under the MIT License.
 
 ---
 
-For any questions or feedback, please contact [Your Name] at [Your Email].
+For any questions or feedback, please contact [Serafim Petrov] at [serafimspetrovs@gmail.com].
 
 Happy encrypting!
