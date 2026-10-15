@@ -50,6 +50,7 @@ type Current = {
 
 local current: Current? = nil
 local cueIndex = 1
+local fadeTween: Tween? = nil
 local activePreset = ShowConfig.LightPresets.house
 local lightBase: { [Instance]: number } = {}
 
@@ -196,8 +197,16 @@ end
 local function stopTrack(fade: number?)
 	current = nil
 	cueIndex = 1
+	if fadeTween then
+		fadeTween:Cancel()
+	end
 	local tween = TweenService:Create(music, TweenInfo.new(fade or 1.5), { Volume = 0 })
+	fadeTween = tween
 	tween.Completed:Connect(function()
+		if fadeTween ~= tween then
+			return
+		end
+		fadeTween = nil
 		music:Stop()
 		music.Volume = BASE_VOLUME
 		music.PlaybackSpeed = 1
@@ -218,6 +227,11 @@ local function startTrack(payload: any)
 		return
 	end
 
+	-- Затухание предыдущего трека нужно остановить, иначе твин продолжит тянуть громкость в нуль.
+	if fadeTween then
+		fadeTween:Cancel()
+		fadeTween = nil
+	end
 	music:Stop()
 	music.Volume = BASE_VOLUME
 	music.PlaybackSpeed = 1
@@ -283,6 +297,7 @@ end)
 
 trackStopped.OnClientEvent:Connect(function()
 	stopTrack(1.5)
+	ClientBus.emit(ClientBus.Topics.ShowStateChanged, { mode = "idle" })
 end)
 
 preloadRequest.OnClientEvent:Connect(function(soundIds)

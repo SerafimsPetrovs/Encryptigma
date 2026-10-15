@@ -2,7 +2,6 @@
 -- Режим съёмки под TikTok: вертикальная рамка 9:16, выключенный интерфейс,
 -- набор операторских движений и кнопка скриншота. Всё локально, на других игроков не влияет.
 
-local CollectionService = game:GetService("CollectionService")
 local Lighting = game:GetService("Lighting")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

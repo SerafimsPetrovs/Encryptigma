@@ -341,6 +341,16 @@ local function pullShowState()
 	refreshInfo()
 end
 
+-- ShowRunner узнаёт о старте трека первым, поэтому HUD реагирует на него,
+-- а не ждёт следующего опроса состояния.
+ClientBus.on(ClientBus.Topics.ShowStateChanged, function(payload)
+	if typeof(payload) == "table" and typeof(payload.mode) == "string" then
+		showMode = payload.mode
+		refreshInfo()
+		task.spawn(pullShowState)
+	end
+end)
+
 task.spawn(function()
 	while true do
 		pullShowState()
