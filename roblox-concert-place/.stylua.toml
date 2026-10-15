@@ -1,0 +1,5 @@
+# Русские строки в UTF-8 занимают по 2 байта, поэтому лимит выше обычных 120.
+column_width = 160
+indent_type = "Tabs"
+indent_width = 4
+quote_style = "AutoPreferDouble"
